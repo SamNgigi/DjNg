@@ -7,11 +7,12 @@ from .serializers import TxtSerializer
 
 
 # Create your views here.
-class TxtViewSet(viewsets.ModelViewSet):
-    """
-    We have to have all these three for the ModelViewSet to work.
-    And remember to migrate for the api to work.
-    """
+class TxtList(ListCreateAPIView):
+
     queryset = Txt.objects.all()
-    permission_classes = [permissions.AllowAny,]
+    serializer_class = TxtSerializer
+    
+class TxtDetail(RetrieveUpdateDestroyAPIView):
+
+    queryset = Txt.objects.all()
     serializer_class = TxtSerializer

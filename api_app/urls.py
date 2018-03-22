@@ -1,11 +1,7 @@
-from django.conf.urls import include, url
-from rest_framework import routers
-
-from .views import TxtViewSet
-
-router = routers.DefaultRouter()
-router.register('', TxtViewSet)
+from django.conf.urls import url
+from . import views
 
 urlpatterns = [
-    url(r'^', include(router.urls)),
+    url(r'^api/$', views.TxtList.as_view()),
+    url(r'^api/(?P<pk>[0-9]+)/$', views.TxtDetail.as_view()),
 ]

@@ -1,5 +1,7 @@
 # from django.shortcuts import render
-from rest_framework.generics import ListCreateAPIView, RetrieveUpdateDestroyAPIView
+from rest_framework.generics import (
+    ListCreateAPIView, RetrieveUpdateDestroyAPIView
+)
 
 from .models import Txt
 
@@ -11,7 +13,8 @@ class TxtList(ListCreateAPIView):
 
     queryset = Txt.objects.all()
     serializer_class = TxtSerializer
-    
+
+
 class TxtDetail(RetrieveUpdateDestroyAPIView):
 
     queryset = Txt.objects.all()

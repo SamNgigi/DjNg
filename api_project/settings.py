@@ -143,4 +143,4 @@ STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
-CORS_ORIGIN_WHITELIST = 'localhost:5000',
+CORS_ORIGIN_WHITELIST = 'localhost:4200',

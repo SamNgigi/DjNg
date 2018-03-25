@@ -145,5 +145,6 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 CORS_ORIGIN_WHITELIST = (
     'localhost:4200',
-    'samngigi.github.io/NgDj/',
+    'https://samngigi.github.io/NgDj/',
 )
+CORS_ALLOW_HEADERS = ['*']
